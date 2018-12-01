@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Git.Client</string>
+    <string name="showcase_title">ShowCase</string>
+    <string name="news_title">News</string>
+    <string name="trending_title">Trending</string>
+    <string name="notification_title">Notification</string>
+    <string name="star_title">Star</string>
 </resources>

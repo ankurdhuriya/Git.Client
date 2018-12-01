@@ -8,4 +8,29 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyTabTextStyle" parent="TextAppearance.Design.Tab">
+        <!--Tab Font size-->
+        <item name="android:textSize">@dimen/design_tab_text_size</item>
+        <!--Tab The default color of the font-->
+        <item name="android:textColor">@color/transparent_dark_gray</item>
+        <!--Tab Whether the font is uppercase-->
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ActivityTabLayoutStyle" parent="Widget.Design.TabLayout">
+        <!--tab Maximum width-->
+        <!--<item name="tabMaxWidth">@dimen/design_tab_max_width</item>-->
+        <!--tab Indicator color-->
+        <item name="tabIndicatorColor">@color/milk_white</item>
+        <!--tab Indicator height-->
+        <item name="tabIndicatorHeight">0dp</item>
+        <!--tab Font style-->
+        <item name="tabTextAppearance">@style/MyTabTextStyle</item>
+        <!--tab Color when selected-->
+        <item name="tabSelectedTextColor">@color/milk_white</item>
+        <item name="tabPaddingStart">2dp</item>
+        <item name="tabPaddingEnd">2dp</item>
+    </style>
+
 </resources>

@@ -2,10 +2,8 @@
 <android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:fitsSystemWindows="true"
     android:id="@+id/drawerLayout">
 
@@ -21,12 +19,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/collapsing_toolbar_layout">
+            android:id="@+id/collapsing_toolbar_layout"
+            android:layout_marginTop="-26dp">
 
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/title_background_image"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="@dimen/toolbar_and_status_height"
                 android:scaleType="matrix"
                 android:fitsSystemWindows="true"
                 app:layout_collapseParallaxMultiplier="0.6"
@@ -42,12 +41,13 @@
 
                 <ImageView
                     android:id="@+id/menu"
-                    android:layout_width="?attr/actionBarSize"
+                    android:layout_width="?android:actionBarSize"
                     android:layout_height="match_parent"
                     android:scaleType="center"
                     android:layout_marginRight="7dp"
                     android:layout_marginLeft="7dp"
-                    android:tint="@android:color/white"/>
+                    android:tint="@android:color/white"
+                    android:src="@drawable/ic_menu_white_24dp"/>
 
                 <android.support.design.widget.TabLayout
                     android:id="@+id/tabs"
@@ -57,19 +57,24 @@
 
                 <ImageView
                     android:id="@+id/search"
-                    android:layout_width="?attr/actionBarSize"
+                    android:layout_width="?android:actionBarSize"
                     android:layout_height="match_parent"
                     android:layout_marginRight="7dp"
                     android:layout_marginLeft="7dp"
                     android:scaleType="center"
                     android:tint="@android:color/white"
-                    android:background="?attr/selectableItemBackground" />
+                    android:background="?android:selectableItemBackground"
+                    android:src="@drawable/ic_search_white_24dp"/>
 
             </LinearLayout>
 
         </RelativeLayout>
 
-
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
     </LinearLayout>
 
